@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.footer {
+    background-color: $color-footer-bg;
+    padding: $spacing-xl 0;
+    margin-top: auto;
+
+    p {
+        text-align: center;
+        color: #fff;
+        font-size: $font-size-sm;
+    }
+}

@@ -1,0 +1,99 @@
+@use 'variables' as *;
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+
+    @media (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+
+    &__image-wrap {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background-color: $color-border-light;
+
+        &--placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-text-muted;
+            font-size: $font-size-sm;
+        }
+    }
+
+    &__image-link {
+        display: block;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding-top: $spacing-md;
+    }
+
+    &__title {
+        font-size: $font-size-lg;
+        font-weight: 700;
+        color: $color-text;
+        margin-bottom: $spacing-xs;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &__title-link {
+        color: $color-text;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    &__date {
+        font-size: $font-size-sm;
+        color: $color-text-muted;
+        margin-bottom: $spacing-sm;
+    }
+
+    &__description {
+        color: $color-text-muted;
+        font-size: $font-size-sm;
+        line-height: 1.6;
+        margin-bottom: $spacing-md;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    &__read-more {
+        font-size: $font-size-sm;
+        font-weight: 600;
+        color: $color-accent;
+
+        &:hover {
+            color: $color-accent-dark;
+        }
+    }
+}

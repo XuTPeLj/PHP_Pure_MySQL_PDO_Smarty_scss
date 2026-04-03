@@ -1,0 +1,118 @@
+@use 'variables' as *;
+
+.article-page {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: $color-surface;
+    padding: $spacing-2xl;
+    border: 1px solid $color-border;
+
+    &__image-wrap {
+        overflow: hidden;
+        margin-bottom: $spacing-xl;
+    }
+
+    &__image {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: $font-size-3xl;
+        color: $color-text;
+        margin-bottom: $spacing-md;
+        line-height: 1.2;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: $font-size-2xl;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        gap: $spacing-lg;
+        margin-bottom: $spacing-lg;
+        padding-bottom: $spacing-lg;
+        border-bottom: 1px solid $color-border;
+    }
+
+    &__categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-xl;
+    }
+
+    &__description {
+        font-size: $font-size-lg;
+        color: $color-text-muted;
+        margin-bottom: $spacing-xl;
+        padding: $spacing-lg;
+        background-color: $color-bg;
+        border-left: 4px solid $color-accent;
+    }
+
+    &__body {
+        font-size: $font-size-base;
+        line-height: 1.8;
+        color: $color-text;
+
+        p {
+            margin-bottom: $spacing-lg;
+        }
+
+        h2, h3, h4 {
+            margin-top: $spacing-xl;
+            margin-bottom: $spacing-md;
+        }
+
+        ul, ol {
+            margin-bottom: $spacing-lg;
+            padding-left: $spacing-xl;
+        }
+
+        li {
+            margin-bottom: $spacing-sm;
+        }
+
+        blockquote {
+            border-left: 4px solid $color-accent;
+            padding: $spacing-md $spacing-lg;
+            margin: $spacing-lg 0;
+            background-color: $color-bg;
+            color: $color-text-muted;
+        }
+    }
+}
+
+.related {
+    max-width: $container-max-width;
+    margin-top: $spacing-3xl;
+    padding-top: $spacing-2xl;
+    border-top: 1px solid $color-border;
+
+    &__title {
+        font-size: $font-size-xl;
+        margin-bottom: $spacing-xl;
+    }
+}
+
+.error-page {
+    text-align: center;
+    padding: $spacing-3xl 0;
+
+    &__code {
+        font-size: 6rem;
+        font-weight: 800;
+        color: $color-accent;
+        line-height: 1;
+        margin-bottom: $spacing-md;
+    }
+
+    &__message {
+        font-size: $font-size-xl;
+        color: $color-text-muted;
+        margin-bottom: $spacing-2xl;
+    }
+}

@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+.header {
+    background-color: $color-surface;
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 56px;
+    }
+
+    &__logo {
+        font-size: $font-size-xl;
+        font-weight: 700;
+        font-style: italic;
+        color: $color-text;
+
+        &:hover {
+            color: $color-text;
+        }
+    }
+}

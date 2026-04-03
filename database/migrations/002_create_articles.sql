@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS articles (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    image VARCHAR(500) DEFAULT NULL,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    body LONGTEXT,
+    views INT UNSIGNED DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_created_at (created_at),
+    INDEX idx_views (views)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

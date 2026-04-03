@@ -1,0 +1,94 @@
+@use 'variables' as *;
+
+.category-section {
+    margin-bottom: $spacing-2xl;
+    border: 1px solid $color-border;
+    background-color: $color-surface;
+    padding: $spacing-xl $spacing-xl $spacing-2xl;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $spacing-xl;
+        flex-wrap: wrap;
+        gap: $spacing-md;
+    }
+
+    &__title {
+        font-size: $font-size-lg;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-text;
+        letter-spacing: 0.03em;
+    }
+
+    &__view-all {
+        font-size: $font-size-sm;
+        font-weight: 500;
+        color: $color-accent;
+
+        &:hover {
+            color: $color-accent-dark;
+        }
+    }
+}
+
+.category-page {
+    &__header {
+        margin-bottom: $spacing-xl;
+    }
+
+    &__title {
+        font-size: $font-size-2xl;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-text;
+        margin-bottom: $spacing-sm;
+    }
+
+    &__description {
+        color: $color-text-muted;
+        font-size: $font-size-lg;
+        max-width: 720px;
+    }
+
+    &__sorting {
+        display: flex;
+        align-items: center;
+        gap: $spacing-md;
+        margin-bottom: $spacing-xl;
+        padding: $spacing-md $spacing-lg;
+        background-color: $color-surface;
+        border: 1px solid $color-border;
+    }
+}
+
+.sorting {
+    &__label {
+        color: $color-text-muted;
+        font-size: $font-size-sm;
+        font-weight: 500;
+    }
+
+    &__link {
+        font-size: $font-size-sm;
+        font-weight: 500;
+        color: $color-text-muted;
+        padding: $spacing-xs $spacing-sm;
+        transition: color $transition-base;
+
+        &:hover {
+            color: $color-accent;
+        }
+
+        &--active {
+            color: $color-accent;
+            font-weight: 700;
+
+            &:hover {
+                color: $color-accent-dark;
+            }
+        }
+    }
+}
